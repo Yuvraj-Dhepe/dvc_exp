@@ -3,7 +3,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from typing import Text
 import yaml
-
+import sys
+sys.path.append('.')
 from src.utils.logs import get_logger
 
 

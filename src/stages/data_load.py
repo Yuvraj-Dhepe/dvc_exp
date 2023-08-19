@@ -2,7 +2,8 @@ import argparse
 from sklearn.datasets import load_iris
 from typing import Text
 import yaml
-
+import sys
+sys.path.append('.')
 from src.utils.logs import get_logger
 
 
