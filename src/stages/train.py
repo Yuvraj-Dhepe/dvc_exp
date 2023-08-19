@@ -3,7 +3,8 @@ import joblib
 import pandas as pd
 from typing import Text
 import yaml
-
+import sys
+sys.path.append('.')
 from src.train.train import train
 from src.utils.logs import get_logger
 

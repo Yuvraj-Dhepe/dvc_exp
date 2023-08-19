@@ -4,8 +4,8 @@ stages:
     cmd: python src/stages/data_load.py --config=params.yaml
     deps:
     - path: src/stages/data_load.py
-      md5: ebc71be562bef12448a953eae1f8d147
-      size: 956
+      md5: 15ff2bb981a7514203b125f7ae31305d
+      size: 987
     params:
       params.yaml:
         base:
@@ -24,8 +24,8 @@ stages:
       md5: 4224576f0267bf88902f87f0f6200967
       size: 2757
     - path: src/stages/featurize.py
-      md5: fa1ec29f6ff564a3e3d305aea118be81
-      size: 1292
+      md5: 0e19c258e0d99844925c3288ded27188
+      size: 1324
     params:
       params.yaml:
         base:
@@ -47,8 +47,8 @@ stages:
       md5: 5d03a1564b3038fc35a842f8e4bde491
       size: 7260
     - path: src/stages/data_split.py
-      md5: 8dfe312ff90160af2ff57f15ac8cb829
-      size: 1298
+      md5: ad632fed8cdbc8b2e3e41d7dc3ece348
+      size: 1330
     params:
       params.yaml:
         base:
@@ -75,8 +75,8 @@ stages:
       md5: ed8a7e5ba0a211251bdee6c498fe3eb4
       size: 5724
     - path: src/stages/train.py
-      md5: 0f01f271bc8169c69ce724f19eacde07
-      size: 1371
+      md5: 43550b4c5f4e4d1dfebde66fb9fb070b
+      size: 1402
     params:
       params.yaml:
         base:
@@ -114,8 +114,8 @@ stages:
           model_path: models/model.joblib
     outs:
     - path: models/model.joblib
-      md5: 02ba4225f8e53d62aaa41ffdf102ea34
-      size: 2669
+      md5: 8be691b8e6e1cd6645369846c31ae124
+      size: 2883
   evaluate:
     cmd: python src/stages/evaluate.py --config=params.yaml
     deps:
@@ -123,11 +123,11 @@ stages:
       md5: b5e45593a772fc66629488e1806505c4
       size: 1492
     - path: models/model.joblib
-      md5: 02ba4225f8e53d62aaa41ffdf102ea34
-      size: 2669
+      md5: 8be691b8e6e1cd6645369846c31ae124
+      size: 2883
     - path: src/stages/evaluate.py
-      md5: e845a44aa40bffa0b20b08a7d854e999
-      size: 2358
+      md5: 68cafb0ea3340346c10587d22dfdcf8d
+      size: 2389
     params:
       params.yaml:
         base:
@@ -141,7 +141,7 @@ stages:
         featurize.target_column: target
     outs:
     - path: reports/confusion_matrix.png
-      md5: 64609d4d2fe8d2718531f253d881dde6
+      md5: 88ac10ffe302128253e939a305cd4048
       size: 24999
     - path: reports/metrics.json
       md5: d533847a0ca14ca93752b1b1f1df349e
