@@ -2,9 +2,11 @@ import argparse
 import pandas as pd
 from typing import Text
 import yaml
-
+import sys
+sys.path.append('.')
 from src.utils.logs import get_logger
-
+import sys
+sys.path.append('.')
 
 def featurize(config_path: Text) -> None:
     """Create new features.
